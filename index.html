@@ -5,9 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
-    <script src="js/script.js" type="module"></script>
-    <link rel="stylesheet" href="assets/style.css">
     <link rel="stylesheet" href="assets/reset.css">
+    <script src="js/script.js" type="module" ></script>
+    <script async
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAX24JY6WcCXNwkXM7VYwBy8v2y962klf0&callback=initMap">
+    </script>
+
     <title>Site Meteo</title>
 </head>
 <body>
@@ -17,6 +20,9 @@
     </div>
     <div class="meteo">
         <input type="button" value="Recharger" class="submitReload">
+        <h1>Voici la Méteo que tu cherche pas</h1>
+
+        <div id="map"> </div>
     </div>
 </body>
 </html>

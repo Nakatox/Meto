@@ -1,5 +1,37 @@
 import * as API from './webservices'
 
+function initMap(){
+
+    let variablePosition = {lat: 48.8534  , lng: 2.3488 }
+
+    let mapOptions = {
+      zoom: 8,
+      center: variablePosition,
+    };
+
+    let map = new google.maps.Map(document.querySelector('#map'), mapOptions);
+
+
+    //   Marker
+
+      let marker = new google.maps.Marker({
+        position:{lat: 48.8534, lng: 2.3488},
+        map:map,
+        icon: "assets/img/localisation.png"
+      })
+
+    //   Info
+
+      let detailWindow = new google.maps.InfoWindow({
+        content: `<h2>Paris</h2>`
+      })
+
+      setTimeout(function() {
+        detailWindow.open(map, marker);
+      }, 100);
+}
+
+
 window.addEventListener('DOMContentLoaded', function(){     
 
     
@@ -41,3 +73,4 @@ window.addEventListener('DOMContentLoaded', function(){
     }
 
 })
+window.initMap = initMap;
