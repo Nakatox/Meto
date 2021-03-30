@@ -17,7 +17,7 @@ export function getCityName(){
 
 export function getWeather(city){
     return new Promise((resolve)=>{
-        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&appid=23ba9494632d825d1101618717bfaaac`)
+        fetch(`http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=23ba9494632d825d1101618717bfaaac`)
             .then(function(response){response.json()
                 .then(function(data){
                     resolve(data)
