@@ -2,4 +2,6 @@ import * as API from './webservices'
 
 
 
-console.log(API.getCityName());
+let city = API.getCityName().then((data)=>{
+    console.log(API.getWeather(data))
+})
