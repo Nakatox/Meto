@@ -1,0 +1,13 @@
+h1 {
+    font-size: 40px;
+}
+
+.name {
+    width: 30%;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.submit {
+    border-radius: 5px;
+}
